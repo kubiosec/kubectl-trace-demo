@@ -8,7 +8,7 @@ I'm using a managed K8S cluster on DigitalOcean, but this should work on the maj
 Always good practice to verify you have access to the correct cluster and your nodes are in a `ready` state
 ```
 export KUBECONFIG=$PWD/kubeconfig.yaml 
-kubect get nodes
+kubectl get nodes
 ```
 
 ## Installing bpftrace
