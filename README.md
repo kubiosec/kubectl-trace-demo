@@ -11,7 +11,7 @@ export KUBECONFIG=$PWD/kubeconfig.yaml
 kubectl get nodes
 ```
 
-## Installing bpftrace
+## Installing kubectl-trace
 ### Install 'krew'
 Check out this page https://krew.sigs.k8s.io/docs/user-guide/setup/install/ to find more information in the 'krew' plugin for 'kubectl'
 ```
