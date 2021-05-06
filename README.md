@@ -34,7 +34,7 @@ kubectl krew
 kubectl krew install trace
 ```
 
-### Setup a demo app
+## Setup a demo app
 ```
 git clone https://github.com/xxradar/app_routable_demo.git
 cd ./app_routable_demo
@@ -55,13 +55,14 @@ Make sure you select a worker node to monitor the sample app
 ex. export NODE=demo-poolebpftracedemo-8ryo2
 ```
 
+## Capturing pods connections
 ### Clone the bpftrace repo
 To get some bpfprobe examples, clone this repo
 ```
-git clone https://github.com/iovisor/bpftrace.git
+git 
+clone https://github.com/iovisor/bpftrace.git
 ```
 
-## Capturing pods connections
 Setup a bpfprobe (ex. monitoring TCP connect events)
 ```
 $ kubectl trace run $NODE -f ./bpftrace/tools/tcpconnect.bt
