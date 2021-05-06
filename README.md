@@ -52,7 +52,7 @@ demo-poolebpftracedemo-8ryop   Ready    <none>   23m   v1.20.2
 Set a helper variable for easy cli commands.<br>
 Make sure you select a worker node to monitor the sample app
 ```
-export NODE=demo-poolebpftracedemo-8ryo2
+ex. export NODE=demo-poolebpftracedemo-8ryo2
 ```
 
 ### Clone the bpftrace repo
