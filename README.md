@@ -59,8 +59,7 @@ ex. export NODE=demo-poolebpftracedemo-8ryo2
 ### Clone the bpftrace repo
 To get some bpfprobe examples, clone this repo
 ```
-git 
-clone https://github.com/iovisor/bpftrace.git
+git clone https://github.com/iovisor/bpftrace.git
 ```
 
 Setup a bpfprobe (ex. monitoring TCP connect events)
