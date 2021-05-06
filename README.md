@@ -90,3 +90,27 @@ If you don't see a command prompt, try pressing enter.
 ...
 ```
 You should see a list of connections being initiated by the pods on the K8S node
+
+
+Let's run this complicated command to run some commands on the node we're running the probe.<br>
+Open a seperate shell (set the `NODE` variable)
+```
+$ kubectl run -it --rm --image xxradar/hackon --overrides='{"apiVersion": "v1", "spec": {"nodeSelector": { "kubernetes.io/hostname": "'$NODE'" }}}' demo -- bash
+curl www.radarhack.com
+...
+nc www.radarhack.com 80
+...
+```
+analyse the ouptut ...
+```
+...
+13:57:24 6395     kubelet          10.11.2.83                              48882  192.168.19.130                          8080
+13:57:24 6395     kubelet          10.11.2.83                              52170  192.168.19.130                          8181
+13:57:24 13173    curl             192.168.19.148                          36206  198.199.124.250                         80
+13:57:25 20108    nginx            192.168.19.133                          50962  10.100.232.133                          80
+...
+13:57:41 20108    nginx            192.168.19.133                          46684  10.109.222.35                           80
+13:57:41 13442    nc               192.168.19.148                          36730  198.199.124.250                         80
+13:57:41 20108    nginx            192.168.19.133                          51486  10.100.232.133                          80
+
+```
