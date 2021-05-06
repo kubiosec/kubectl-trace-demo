@@ -2,7 +2,7 @@
 For all information head out to https://github.com/iovisor/bpftrace
 
 ## Get your hands on a K8S cluster
-I'm using a managed K8S cluster on DigitalOcean, but this should work on the majority of clusters that are around.
+I'm using a self-managed kubeadm cluster using Ubuntu and the latest version of K8S.
 
 ## Verify cluster access
 Always good practice to verify you have access to the correct cluster and your nodes are in a `ready` state
