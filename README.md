@@ -1,5 +1,5 @@
 # A quick braindump on how I got started w/ bpftrace
-For all information head out to https://github.com/iovisor/bpftrace
+For all information head out to https://github.com/iovisor/bpftrace and https://github.com/iovisor/kubectl-trace
 
 ## Get your hands on a K8S cluster
 I'm using a self-managed kubeadm cluster using Ubuntu and the latest version of K8S.
