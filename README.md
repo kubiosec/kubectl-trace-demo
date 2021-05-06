@@ -89,9 +89,7 @@ If you don't see a command prompt, try pressing enter.
 13:11:23 7962     kubelet          10.11.2.126                             56630  10.11.2.126                             6443
 ...
 ```
-You should see a list of connections being initiated by the pods on the K8S node
-
-
+You should see a list of connections being initiated by the pods on the K8S node.<br>
 Let's run this complicated command to run some commands on the node we're running the probe.<br>
 Open a seperate shell (set the `NODE` variable)
 ```
