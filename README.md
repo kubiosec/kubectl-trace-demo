@@ -49,10 +49,10 @@ kubectl trace run $NODE -e "tracepoint:syscalls:sys_enter_* { @[probe] = count()
 ```
 You should see someting like
 ```
-$ kubectl trace run demo-poolebpftracedemo-8ryo2  -e "tracepoint:syscalls:sys_enter_* { @[probe] = count(); }"
+$ kubectl trace run $NODE -e "tracepoint:syscalls:sys_enter_* { @[probe] = count(); }"
 trace 4f4ea9e4-ae68-11eb-a952-061a9c98df32 created
 ```
-You should see a pod beibng created and running. Feel free to kill it and head to the more interesting examples.
+You should see a pod being created and running. Feel free to kill it and head to the more interesting examples.
 
 ### Clone the bpftrace repo
 To get some examples, clone this repo
