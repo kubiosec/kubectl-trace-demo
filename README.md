@@ -44,7 +44,8 @@ demo-poolebpftracedemo-8ryop   Ready    <none>   23m   v1.20.2
 ```
 Update following command with the node name
 ```
-kubectl trace run demo-poolebpftracedemo-8ryo2  -e "tracepoint:syscalls:sys_enter_* { @[probe] = count(); }"
+export NODE=demo-poolebpftracedemo-8ryo2
+kubectl trace run $NODE -e "tracepoint:syscalls:sys_enter_* { @[probe] = count(); }"
 ```
 You should see someting like
 ```
