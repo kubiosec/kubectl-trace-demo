@@ -61,7 +61,7 @@ To get some bpfprobe examples, clone this repo
 git clone https://github.com/iovisor/bpftrace.git
 ```
 
-### Capturing pods connections
+## Capturing pods connections
 Setup a bpfprobe (ex. monitoring TCP connect events)
 ```
 $ kubectl trace run $NODE -f ./bpftrace/tools/tcpconnect.bt
