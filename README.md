@@ -29,7 +29,7 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 kubectl krew
 ```
-### Installing bpftrace
+### Installing bpftrace (Ubuntu)
 ```
-sudo apt-get install -y bpftrace
+sudo snap install bpftrace
 ```
