@@ -33,22 +33,21 @@ kubectl krew
 ```
 kubectl krew install trace
 ```
-### Verify things are working
-Select a K8S node you want to analyse
+
+### Setup a demo app
+```
+git clone https://github.com/xxradar/app_routable_demo.git
+cd ./app_routable_demo
+./setup.sh
+watch kubectl get po -n app-routable-demo
+```
+
 ```
 $ kubectl get no
 NAME                           STATUS   ROLES    AGE   VERSION
 demo-poolebpftracedemo-8ryo2   Ready    <none>   23m   v1.20.2
 demo-poolebpftracedemo-8ryol   Ready    <none>   23m   v1.20.2
 demo-poolebpftracedemo-8ryop   Ready    <none>   23m   v1.20.2
-```
-
-#### Setup a demo app
-```
-git clone https://github.com/xxradar/app_routable_demo.git
-cd ./app_routable_demo
-./setup.sh
-watch kubectl get po -n app-routable-demo
 ```
 
 ### Set a helper variable for easy cli commands
