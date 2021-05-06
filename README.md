@@ -1,4 +1,4 @@
-# A quick braindump on how I got started w/ bpftrace
+# A quick braindump on how I got started w/ kubectl-trace (bpftrace)
 For all information head out to https://github.com/iovisor/bpftrace and https://github.com/iovisor/kubectl-trace
 
 ## Get your hands on a K8S cluster
