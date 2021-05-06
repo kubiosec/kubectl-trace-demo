@@ -42,24 +42,7 @@ demo-poolebpftracedemo-8ryo2   Ready    <none>   23m   v1.20.2
 demo-poolebpftracedemo-8ryol   Ready    <none>   23m   v1.20.2
 demo-poolebpftracedemo-8ryop   Ready    <none>   23m   v1.20.2
 ```
-Update following command with the node name
-```
-export NODE=demo-poolebpftracedemo-8ryo2
-kubectl trace run $NODE -e "tracepoint:syscalls:sys_enter_* { @[probe] = count(); }"
-```
-You should see someting like
-```
-$ kubectl trace run $NODE -e "tracepoint:syscalls:sys_enter_* { @[probe] = count(); }"
-trace 4f4ea9e4-ae68-11eb-a952-061a9c98df32 created
-```
-You should see a pod being created and running. Feel free to kill it and head to the more interesting examples.
 
-### Clone the bpftrace repo
-To get some examples, clone this repo
-```
-git clone https://github.com/iovisor/bpftrace.git
-```
-### Capturing pods connections
 #### Setup a demo app
 ```
 git clone https://github.com/xxradar/app_routable_demo.git
@@ -67,7 +50,21 @@ cd ./app_routable_demo
 ./setup.sh
 watch kubectl get po -n app-routable-demo
 ```
-#### Setup a bpf probe
+
+### Set a helper variable for easy cli commands
+Make sure you select a worker node to monitor the sample app
+```
+export NODE=demo-poolebpftracedemo-8ryo2
+```
+
+### Clone the bpftrace repo
+To get some bpfprobe examples, clone this repo
+```
+git clone https://github.com/iovisor/bpftrace.git
+```
+
+### Capturing pods connections
+#### Setup a bpfprobe (ex. monitoring TCP connect events)
 ```
 $ kubectl trace run $NODE -f ./bpftrace/tools/tcpconnect.bt
 trace 2b25bf44-ae69-11eb-89a6-061a9c98df32 created
@@ -94,4 +91,4 @@ If you don't see a command prompt, try pressing enter.
 13:11:23 7962     kubelet          10.11.2.126                             56630  10.11.2.126                             6443
 ...
 ```
-
+You should see a list of connections being initiated by the pods on the K8S node
