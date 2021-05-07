@@ -4,7 +4,7 @@ For all information head out to https://github.com/iovisor/bpftrace and https://
 ## Get your hands on a K8S cluster
 I'm using a self-managed kubeadm cluster using Ubuntu and the latest version of K8S.
 
-## Verify cluster access
+### Verify cluster access
 Always good practice to verify you have access to the correct cluster and your nodes are in a `ready` state
 ```
 export KUBECONFIG=$PWD/kubeconfig.yaml 
