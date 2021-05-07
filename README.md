@@ -42,15 +42,12 @@ cd ./app_routable_demo
 watch kubectl get po -n app-routable-demo
 ```
 
-```
-$ kubectl get no
-NAME                           STATUS   ROLES    AGE   VERSION
-demo-poolebpftracedemo-8ryo2   Ready    <none>   23m   v1.20.2
-demo-poolebpftracedemo-8ryol   Ready    <none>   23m   v1.20.2
-demo-poolebpftracedemo-8ryop   Ready    <none>   23m   v1.20.2
-```
 Set a helper variable for easy cli commands.<br>
-Make sure you select a worker node to monitor the sample app
+Make sure you select a worker node to monitor the sample app ...
+```
+$ kubectl get po -n app-routable-demo -o wide
+...
+```
 ```
 ex. export NODE=demo-poolebpftracedemo-8ryo2
 ```
